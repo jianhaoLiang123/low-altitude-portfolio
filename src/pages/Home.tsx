@@ -188,11 +188,15 @@ export default function Home() {
               <Reveal key={adv.title} delay={i * 80}>
                 <div className="group flex h-full flex-col gap-3 rounded-xl border border-slate-200 bg-white p-6 shadow-sm transition-all duration-300 ease-out hover:-translate-y-1 hover:border-blue-300 hover:shadow-xl hover:shadow-blue-600/10">
                   <div className="flex items-center gap-3">
-                    <span className="rounded-lg bg-blue-50 p-2.5 text-blue-600">
-                      <adv.icon size={20} strokeWidth={1.8} />
+                    <span className="rounded-full bg-blue-600 p-3 text-white shadow-sm shadow-blue-600/25">
+                      <adv.icon size={22} strokeWidth={1.8} />
                     </span>
-                    <h3 className="text-base font-bold text-slate-900">{adv.title}</h3>
+                    <h3 className="text-lg font-bold text-slate-900 md:text-xl">{adv.title}</h3>
                   </div>
+                  <span
+                    aria-hidden
+                    className="mt-1 h-1 w-8 rounded-full bg-gradient-to-r from-blue-600 to-cyan-500"
+                  />
                   <p className="text-sm leading-relaxed text-slate-600">{adv.desc}</p>
                   {adv.tools && (
                     <div className="mt-1 flex flex-wrap gap-1.5">
