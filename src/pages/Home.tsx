@@ -4,6 +4,7 @@ import WorkCard from '../components/WorkCard'
 import Reveal from '../components/Reveal'
 import CountUp from '../components/CountUp'
 import HudCorners from '../components/HudCorners'
+import Strengths from '../components/Strengths'
 
 /**
  * 首页：Hero（真实信息 + 轻科技感背景）+ 个人优势 + 精选作品 + 经历速览 + 联系我。
@@ -216,6 +217,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* ── 盖洛普优势测评（紧接个人优势，经历速览之上） ── */}
+      <Strengths />
 
       {/* ── 精选作品 ─────────────────────────────────────────── */}
       <section id="works" className="scroll-mt-16 border-t border-slate-200 bg-white">
