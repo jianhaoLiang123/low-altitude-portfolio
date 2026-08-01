@@ -1,4 +1,4 @@
-import { Download } from 'lucide-react'
+import { ExternalLink } from 'lucide-react'
 import WorkDetailLayout from '../components/WorkDetailLayout'
 import SectionHeader from '../components/SectionHeader'
 import Reveal from '../components/Reveal'
@@ -70,14 +70,13 @@ export default function WorkZeya() {
           </div>
           <div className="mt-6">
             <a
-              href="works-zeya.pdf"
+              href="https://my.feishu.cn/wiki/LEIFwIXvpisRVxkCekkcdLvanPh"
               target="_blank"
-              rel="noreferrer"
-              download
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-lg bg-blue-600 px-5 py-2.5 text-sm font-medium text-white shadow-sm transition-all duration-200 hover:-translate-y-px hover:bg-blue-700 hover:shadow-lg hover:shadow-blue-600/25 focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2 focus-visible:outline-none"
             >
-              <Download size={16} />
-              下载完整方案 PDF
+              <ExternalLink size={16} />
+              在线查看完整方案（飞书文档）
             </a>
           </div>
         </section>
@@ -202,14 +201,13 @@ export default function WorkZeya() {
               className="mb-0"
             />
             <a
-              href="works-zeya.pdf"
+              href="https://my.feishu.cn/wiki/LEIFwIXvpisRVxkCekkcdLvanPh"
               target="_blank"
-              rel="noreferrer"
-              download
+              rel="noopener noreferrer"
               className="inline-flex shrink-0 items-center gap-1.5 rounded-lg bg-blue-600 px-4 py-2 text-sm font-medium text-white shadow-sm transition-all duration-200 hover:-translate-y-px hover:bg-blue-700 hover:shadow-lg hover:shadow-blue-600/25 focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2 focus-visible:outline-none"
             >
-              <Download size={15} />
-              下载 PDF 版
+              <ExternalLink size={15} />
+              飞书文档版
             </a>
           </div>
           <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm md:p-10">
