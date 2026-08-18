@@ -227,8 +227,8 @@ export default function Home() {
           <Reveal>
             <SectionHeader eyebrow="SELECTED WORKS" title="精选作品" />
           </Reveal>
-          <div className="grid gap-6 md:grid-cols-2">
-            <Reveal delay={0}>
+          <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+            <Reveal delay={0} className="h-full">
               <WorkCard
                 title="温州泽雅水库无人机巡检建设方案"
                 tags={['水利巡检', '建设方案', 'ROI 分析']}
@@ -238,7 +238,7 @@ export default function Home() {
                 coverAlt="泽雅水库无人机巡检建设方案封面图"
               />
             </Reveal>
-            <Reveal delay={90}>
+            <Reveal delay={90} className="h-full">
               <WorkCard
                 title="普陀区低空经济岛际物流服务采购项目 · 投标方案"
                 tags={['低空物流', '投标方案', '多机型协同']}
@@ -246,6 +246,16 @@ export default function Home() {
                 to="/works/putuo"
                 cover="images/cover-putuo.webp"
                 coverAlt="普陀区岛际物流投标方案封面图"
+              />
+            </Reveal>
+            <Reveal delay={180} className="h-full">
+              <WorkCard
+                title="低空公共服务产业调研分析报告"
+                tags={['低空经济', '公共服务', '产业调研']}
+                summary="基于政府需求、技术装备与竞争格局的系统研究，为地方政府采购决策与企业市场进入提供参考"
+                to="/works/report"
+                cover="images/cover-public-service.webp"
+                coverAlt="低空公共服务产业调研分析报告封面图"
               />
             </Reveal>
           </div>

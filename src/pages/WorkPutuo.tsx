@@ -75,7 +75,7 @@ export default function WorkPutuo() {
       tags={['低空物流', '投标方案', '多机型协同', '大疆司空2']}
       cover="images/cover-putuo.webp"
       coverAlt="普陀区岛际物流服务采购项目投标方案封面横幅"
-      next={{ to: '/works/zeya', label: '返回查看作品：温州泽雅水库无人机巡检建设方案' }}
+      next={{ to: '/works/report', label: '查看下一个作品：低空公共服务产业调研分析报告' }}
     >
       {/* ── 区域① 项目概览 ─────────────────────────── */}
       <Reveal>
