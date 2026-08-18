@@ -227,7 +227,7 @@ export default function Home() {
           <Reveal>
             <SectionHeader eyebrow="SELECTED WORKS" title="精选作品" />
           </Reveal>
-          <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+          <div className="grid gap-6 md:grid-cols-2">
             <Reveal delay={0} className="h-full">
               <WorkCard
                 title="温州泽雅水库无人机巡检建设方案"
@@ -256,6 +256,16 @@ export default function Home() {
                 to="/works/report"
                 cover="images/cover-public-service.webp"
                 coverAlt="低空公共服务产业调研分析报告封面图"
+              />
+            </Reveal>
+            <Reveal delay={270} className="h-full">
+              <WorkCard
+                title="中国低空安全（反无人机）行业深度分析报告"
+                tags={['反无人机', '低空安全防御', '行业深度研究']}
+                summary="中国反无人机行业的系统性深度情报分析报告，全面梳理行业从被动拦截向主动智能管控转型的关键趋势"
+                to="/works/counter-drone"
+                cover="images/cover-counter-drone.webp"
+                coverAlt="中国低空安全（反无人机）行业深度分析报告封面图"
               />
             </Reveal>
           </div>

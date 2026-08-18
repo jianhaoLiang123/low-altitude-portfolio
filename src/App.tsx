@@ -7,6 +7,7 @@ import Home from './pages/Home'
 import WorkZeya from './pages/WorkZeya'
 import WorkPutuo from './pages/WorkPutuo'
 import WorkReport from './pages/WorkReport'
+import WorkCounterDrone from './pages/WorkCounterDrone'
 
 /** 路由切换时回到页面顶部 */
 function ScrollToTop() {
@@ -29,6 +30,7 @@ export default function App() {
           <Route path="/works/zeya" element={<WorkZeya />} />
           <Route path="/works/putuo" element={<WorkPutuo />} />
           <Route path="/works/report" element={<WorkReport />} />
+        <Route path="/works/counter-drone" element={<WorkCounterDrone />} />
         </Routes>
       </main>
       <SiteFooter />
