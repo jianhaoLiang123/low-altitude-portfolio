@@ -31,7 +31,11 @@ export default function Reveal({ children, delay = 0, className }: RevealProps) 
           io.disconnect()
         }
       },
-      { threshold: 0.15, rootMargin: '0px 0px -40px 0px' },
+      // threshold 取 0：元素进入视口（含 rootMargin 预留 40px）即触发。
+      // 不能用 0.15 之类的比例阈值——「方案全文」这类超高 section（高度超过
+      // 视口 ÷ 0.15 ≈ 6.7 倍）永远到不了 15% 可见比例，会永久 opacity-0 占位，
+      // 表现为正文与底部导航之间出现巨大空白。
+      { threshold: 0, rootMargin: '0px 0px -40px 0px' },
     )
     io.observe(el)
     return () => io.disconnect()

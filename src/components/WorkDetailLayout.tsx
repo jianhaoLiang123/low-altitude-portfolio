@@ -7,8 +7,14 @@ import BackToTop from './BackToTop'
  * 作品详情页通用容器。
  * 页头：封面横幅（深蓝渐变遮罩 + 白字 + HUD 边角）；
  * 内容区：由页面以 children 传入各 section；
- * 底部：下一个作品链接 + 回到顶部悬浮按钮。
+ * 底部：上一个 / 下一个作品双导航卡 + 回到顶部悬浮按钮。
  */
+interface WorkDetailNavLink {
+  to: string
+  /** 作品完整标题 */
+  label: string
+}
+
 interface WorkDetailLayoutProps {
   /** eyebrow 小标签，如 "作品 01 · 水利巡检" */
   eyebrow: string
@@ -19,8 +25,10 @@ interface WorkDetailLayoutProps {
   /** 页头横幅封面（images/*.webp，相对路径） */
   cover: string
   coverAlt: string
-  /** 底部下一个作品链接 */
-  next: { to: string; label: string }
+  /** 底部上一个作品链接（首页作品循环到末页） */
+  prev: WorkDetailNavLink
+  /** 底部下一个作品链接（末页作品循环到首页） */
+  next: WorkDetailNavLink
   children: ReactNode
 }
 
@@ -30,6 +38,7 @@ export default function WorkDetailLayout({
   tags,
   cover,
   coverAlt,
+  prev,
   next,
   children,
 }: WorkDetailLayoutProps) {
@@ -80,14 +89,29 @@ export default function WorkDetailLayout({
         {/* 内容区域 */}
         <div className="flex flex-col gap-16 py-12 md:gap-20">{children}</div>
 
-        {/* 底部：下一个作品 */}
-        <Link
-          to={next.to}
-          className="group flex items-center justify-between rounded-xl border border-slate-200 bg-slate-50 px-6 py-6 shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:border-blue-300 hover:shadow-lg focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:outline-none"
-        >
-          <span className="text-base font-semibold text-slate-900">{next.label}</span>
-          <span aria-hidden className="text-xl text-blue-600 transition-transform duration-300 group-hover:translate-x-1">→</span>
-        </Link>
+        {/* 底部：上一个 / 下一个作品（首尾循环，md 双列、手机堆叠） */}
+        <nav aria-label="作品导航" className="grid gap-4 md:grid-cols-2">
+          <Link
+            to={prev.to}
+            className="group flex items-center gap-4 rounded-xl border border-slate-200 bg-slate-50 px-6 py-6 shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:border-blue-300 hover:shadow-lg focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:outline-none"
+          >
+            <span aria-hidden className="shrink-0 text-xl text-blue-600 transition-transform duration-300 group-hover:-translate-x-1">←</span>
+            <span className="flex min-w-0 flex-col gap-1">
+              <span className="text-xs text-slate-500">上一个作品</span>
+              <span className="text-base font-semibold text-slate-900">{prev.label}</span>
+            </span>
+          </Link>
+          <Link
+            to={next.to}
+            className="group flex items-center justify-end gap-4 rounded-xl border border-slate-200 bg-slate-50 px-6 py-6 shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:border-blue-300 hover:shadow-lg focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:outline-none"
+          >
+            <span className="flex min-w-0 flex-col gap-1 text-right">
+              <span className="text-xs text-slate-500">下一个作品</span>
+              <span className="text-base font-semibold text-slate-900">{next.label}</span>
+            </span>
+            <span aria-hidden className="shrink-0 text-xl text-blue-600 transition-transform duration-300 group-hover:translate-x-1">→</span>
+          </Link>
+        </nav>
       </div>
 
       {/* 详情页内容较长：回到顶部悬浮按钮 */}

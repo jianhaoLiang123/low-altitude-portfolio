@@ -48,7 +48,8 @@ export default function WorkZeya() {
       tags={['水利巡检', '建设方案', 'ROI 分析', '大疆司空2']}
       cover="images/cover-zeya.webp"
       coverAlt="泽雅水库无人机巡检建设方案封面横幅"
-      next={{ to: '/works/putuo', label: '查看下一个作品：普陀区低空经济岛际物流服务采购项目' }}
+      prev={{ to: '/works/counter-drone', label: '中国低空安全（反无人机）行业深度分析报告' }}
+      next={{ to: '/works/putuo', label: '普陀区低空经济岛际物流服务采购项目 · 投标方案' }}
     >
       {/* ── 区域① 项目概览 ─────────────────────────── */}
       <Reveal>

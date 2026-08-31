@@ -27,7 +27,8 @@ export default function WorkReport() {
       tags={['低空经济', '公共服务', '产业调研']}
       cover="images/cover-public-service.webp"
       coverAlt="低空公共服务产业调研分析报告封面横幅"
-      next={{ to: '/works/counter-drone', label: '查看下一个作品：中国低空安全（反无人机）行业深度分析报告' }}
+      prev={{ to: '/works/putuo', label: '普陀区低空经济岛际物流服务采购项目 · 投标方案' }}
+      next={{ to: '/works/counter-drone', label: '中国低空安全（反无人机）行业深度分析报告' }}
     >
       {/* ── 区域① 项目概览 ─────────────────────────── */}
       <Reveal>

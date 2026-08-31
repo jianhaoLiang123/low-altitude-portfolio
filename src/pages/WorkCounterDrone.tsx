@@ -56,7 +56,8 @@ export default function WorkCounterDrone() {
       tags={['反无人机', '低空安全防御', '行业深度研究']}
       cover="images/cover-counter-drone.webp"
       coverAlt="中国低空安全（反无人机）行业深度分析报告封面横幅"
-      next={{ to: '/works/zeya', label: '返回查看作品：温州泽雅水库无人机巡检建设方案' }}
+      prev={{ to: '/works/report', label: '低空公共服务产业调研分析报告' }}
+      next={{ to: '/works/zeya', label: '温州泽雅水库无人机巡检建设方案' }}
     >
       {/* ── 区域① 项目概览 ─────────────────────────── */}
       <Reveal>
