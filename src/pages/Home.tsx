@@ -1,4 +1,4 @@
-import { Briefcase, Plane, Sparkles, BadgeCheck } from 'lucide-react'
+import { Briefcase, Plane, Radar, Map, Sparkles, BadgeCheck } from 'lucide-react'
 import SectionHeader from '../components/SectionHeader'
 import WorkCard from '../components/WorkCard'
 import Reveal from '../components/Reveal'
@@ -20,30 +20,42 @@ const STATS = [
   { to: 96, suffix: ' 分', label: 'CAAC 超视距执照 · 理论' },
 ]
 
-/** 个人优势卡片（2×2） */
+/** 个人优势卡片（3×2） */
 const ADVANTAGES = [
   {
     icon: Briefcase,
-    title: '政企项目全流程经验',
-    desc: '5 年国企与政府类项目经验，深度对接城发、铁投、交通、规划、水利等部门，覆盖立项、需求分析、方案设计、招投标、交付全流程。',
+    title: 'To G 售前全流程',
+    desc: '5 年政企服务经验，深度对接城发、铁投、交通、规划、水利等部门，覆盖需求调研、方案设计、汇报演示到招投标全流程；累计参与 30 余个投标项目，中标 10 余项，熟悉政府项目立项与审批流程。目标导向，可适应出差。',
     tools: null as string[] | null,
   },
   {
     icon: Plane,
-    title: '低空产业知识与实践',
-    desc: '掌握无人机硬件选型与行业应用，具备巡检、物流、市政项目经验；熟悉低空经济商业模式、应用场景、政策与空域管理。',
+    title: '低空实操与大疆生态',
+    desc: '持 CAAC 中型多旋翼超视距驾驶员执照；掌握大疆机场 3、Matrice 4 系列、FlyCart 100、Matrice 400 等主力机型选型与场景应用。',
+    tools: null as string[] | null,
+  },
+  {
+    icon: Radar,
+    title: '低空行业认知与政策跟踪',
+    desc: '熟悉低空基础设施建设与低空运营应用场景，持续跟踪空域管理改革、一网统管、一网统飞、无人机合规等政策动态；主动参加世界无人机大会、上海低空经济发展大会，积累反无与无人机应用上下游企业人脉。',
+    tools: null as string[] | null,
+  },
+  {
+    icon: Map,
+    title: '测绘与空间数据能力',
+    desc: '具备勘测、测绘等协作单位资源，可调用测绘勘测资质与专业支撑；熟悉无人机测绘在项目中的应用。',
     tools: null as string[] | null,
   },
   {
     icon: Sparkles,
-    title: '持续学习与 AI 应用',
-    desc: '关注 AI 硬件、具身智能、新能源储能动态；使用 Coze / Kimi / Codex 等搭建智能体工作流，输出成果并运营个人 IP。',
+    title: '学习力与 AI 提效',
+    desc: '非脱产一个月考取 CAAC 执照；主动学习 Coze、Codex 等 AI 工具，用 Codex+Obsidian 搭建个人知识库，把方案、标书、汇报素材沉淀为可复用资产；关注 AI 智能硬件、具身智能、新能源储能等行业，目前在学习 PMP。',
     tools: null as string[] | null,
   },
   {
     icon: BadgeCheck,
-    title: '证书与专业工具链',
-    desc: 'CAAC 中型多旋翼超视距驾驶员执照（理论 96 分）、AOPA 合格证；熟练以下方案与行业工具：',
+    title: '证书与工具链',
+    desc: 'CAAC 中型多旋翼超视距驾驶员执照（理论 96 分）、AOPA 民用无人机驾驶员应用技能合格证；熟练以下方案与行业工具：',
     tools: ['大疆司空2', '大疆司运', '大疆智图', 'DasViewer', 'SketchUp', 'Rhino', 'Revit', 'AutoCAD'],
   },
 ]
@@ -184,9 +196,9 @@ export default function Home() {
           <Reveal>
             <SectionHeader eyebrow="ADVANTAGES" title="个人优势" />
           </Reveal>
-          <div className="grid gap-5 sm:grid-cols-2">
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {ADVANTAGES.map((adv, i) => (
-              <Reveal key={adv.title} delay={i * 80}>
+              <Reveal key={adv.title} delay={i * 80} className="h-full">
                 <div className="group flex h-full flex-col gap-3 rounded-xl border border-slate-200 bg-white p-6 shadow-sm transition-all duration-300 ease-out hover:-translate-y-1 hover:border-blue-300 hover:shadow-xl hover:shadow-blue-600/10">
                   <div className="flex items-center gap-3">
                     <span className="rounded-full bg-blue-600 p-3 text-white shadow-sm shadow-blue-600/25">
