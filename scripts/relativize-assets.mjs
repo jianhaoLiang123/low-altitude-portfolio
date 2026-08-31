@@ -11,8 +11,6 @@ const FILES = [
   'src/pages/Home.tsx',
   'src/components/SiteHeader.tsx',
   'src/components/SiteFooter.tsx',
-  'src/content/zeya.md',
-  'src/content/putuo.md',
 ]
 
 // 前缀字符限定为 双引号 / 单引号 / 左括号（md 图片语法），避免误伤

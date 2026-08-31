@@ -5,10 +5,7 @@ import Reveal from '../components/Reveal'
 import InfoGrid from '../components/InfoGrid'
 import StatCards from '../components/StatCards'
 import ImageGallery, { type GalleryItem } from '../components/ImageGallery'
-import RoleTriptych from '../components/RoleTriptych'
-import MarkdownView from '../components/MarkdownView'
 import PainPoints from '../components/PainPoints'
-import content from '../content/zeya.md?raw'
 
 /**
  * 作品 01：温州泽雅水库无人机巡检建设方案（完整内容版）
@@ -191,54 +188,6 @@ export default function WorkZeya() {
         </section>
       </Reveal>
 
-      {/* ── 区域⑥ 完整方案全文 ─────────────────────── */}
-      <Reveal>
-        <section>
-          <div className="mb-10 flex flex-wrap items-end justify-between gap-4">
-            <SectionHeader
-              eyebrow="06 · FULL PROPOSAL"
-              title="方案全文"
-              description="以下为完整建设方案，报价已脱敏为量级"
-              className="mb-0"
-            />
-            <a
-              href="https://my.feishu.cn/wiki/LEIFwIXvpisRVxkCekkcdLvanPh"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex shrink-0 items-center gap-1.5 rounded-lg bg-blue-600 px-4 py-2 text-sm font-medium text-white shadow-sm transition-all duration-200 hover:-translate-y-px hover:bg-blue-700 hover:shadow-lg hover:shadow-blue-600/25 focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2 focus-visible:outline-none"
-            >
-              <ExternalLink size={15} />
-              飞书文档版
-            </a>
-          </div>
-          <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm md:p-10">
-            <MarkdownView content={content} />
-          </div>
-        </section>
-      </Reveal>
-
-      {/* ── 区域⑦ 我的角色与成果 ───────────────────── */}
-      <Reveal>
-        <section>
-          <SectionHeader eyebrow="07 · MY ROLE" title="我的角色与成果" />
-          <RoleTriptych
-            items={[
-              {
-                label: '难点',
-                desc: '客户需求模糊——仅提出「用无人机代替人工」，预算与验收标准均不明确。',
-              },
-              {
-                label: '思路',
-                desc: '深入一线调研，以同类场景标杆案例与客户拉齐需求，设计「无人机 + 自动化机巢 + 云平台」全场景方案。',
-              },
-              {
-                label: '成果',
-                desc: '完成从硬件选型、机巢选址、空域申报到运营保障的全流程方案输出，将模糊需求聚焦为真实购买需求。',
-              },
-            ]}
-          />
-        </section>
-      </Reveal>
     </WorkDetailLayout>
   )
 }

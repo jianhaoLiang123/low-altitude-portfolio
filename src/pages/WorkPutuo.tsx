@@ -5,10 +5,7 @@ import Reveal from '../components/Reveal'
 import InfoGrid from '../components/InfoGrid'
 import StatCards from '../components/StatCards'
 import ImageGallery, { type GalleryItem } from '../components/ImageGallery'
-import RoleTriptych from '../components/RoleTriptych'
-import MarkdownView from '../components/MarkdownView'
 import PainPoints from '../components/PainPoints'
-import content from '../content/putuo.md?raw'
 
 /**
  * 作品 02：普陀区低空经济岛际物流服务采购项目 · 投标方案（完整内容版）
@@ -243,54 +240,6 @@ export default function WorkPutuo() {
         </section>
       </Reveal>
 
-      {/* ── 区域⑥ 完整方案全文 ─────────────────────── */}
-      <Reveal>
-        <section>
-          <div className="mb-10 flex flex-wrap items-end justify-between gap-4">
-            <SectionHeader
-              eyebrow="06 · FULL PROPOSAL"
-              title="方案全文"
-              description="以下为完整投标方案，报价已脱敏为量级"
-              className="mb-0"
-            />
-            <a
-              href="https://my.feishu.cn/wiki/VE5twkkdyiiYKCkZZNrcr2ednib"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex shrink-0 items-center gap-1.5 rounded-lg bg-blue-600 px-4 py-2 text-sm font-medium text-white shadow-sm transition-all duration-200 hover:-translate-y-px hover:bg-blue-700 hover:shadow-lg hover:shadow-blue-600/25 focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2 focus-visible:outline-none"
-            >
-              <ExternalLink size={15} />
-              飞书文档版
-            </a>
-          </div>
-          <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm md:p-10">
-            <MarkdownView content={content} />
-          </div>
-        </section>
-      </Reveal>
-
-      {/* ── 区域⑦ 我的角色与成果 ───────────────────── */}
-      <Reveal>
-        <section>
-          <SectionHeader eyebrow="07 · MY ROLE" title="我的角色与成果" />
-          <RoleTriptych
-            items={[
-              {
-                label: '难点',
-                desc: '多岛屿、多机型协同的复杂运营场景，且政府采购评标标准严格。',
-              },
-              {
-                label: '思路',
-                desc: '基于对政府招标流程的熟悉，设计「无人值守 + 有人辅助」混合运营方案，逐项对标评标标准。',
-              },
-              {
-                label: '成果',
-                desc: '任务完成率、配送时效等核心指标均优于招标要求，形成完整投标方案与商务报价。',
-              },
-            ]}
-          />
-        </section>
-      </Reveal>
     </WorkDetailLayout>
   )
 }
